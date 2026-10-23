@@ -1,0 +1,41 @@
+{
+  "name": "nomash-library",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.js",
+    "deploy": "npm run build && cd dist && wrangler pages deploy . --project-name=nomash-library --commit-dirty=true",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@primeuix/themes": "^3.0.0",
+    "@primevue/themes": "^4.0.4",
+    "axios": "^1.20.0",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "firebase": "^9.14.0",
+    "firebase-admin": "^14.5.0",
+    "firebase-functions": "^7.4.0",
+    "primevue": "^4.5.5",
+    "vue": "^3.4.29",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^10.11.1",
+    "playwright": "^1.62.1",
+    "prettier": "^3.2.5",
+    "vite": "^5.4.21",
+    "vite-plugin-vue-devtools": "^7.3.1",
+    "wrangler": "^4.0.0"
+  }
+}
